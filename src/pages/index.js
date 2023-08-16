@@ -2,104 +2,32 @@
 import styles from '../styles/Home.module.css';
 
 function app() {
+    //onclick no click
+    //onchange é na mudança
 
+    // fazer um input com onchange que o a pessoa digitar ele vai somar com uma variavel
+    // com o valor 4 e vai retornar o alert com o resultado
 
+    //fazer um click numa div com texto qualquer que retorne um alert o texto "você conseguiu"
+    // de uma variavel
+    const botao = 4
 
-
-    const lista = [
-        {
-            nome: "anderson",
-            email: "tuche@tuche.com.br",
-            elegal: false,
-
-        },
-        {
-            nome: "luiz",
-            email: "luiz@luiz.com.br",
-            elegal: true,
-
-        },
-        {
-            nome: "jane",
-            email: "jane@jane.com.br",
-            elegal: true,
-
-        },
-        {
-            nome: "david",
-            email: "david@david.com.br",
-            elegal: false,
-
-        },
-    ]
-
-    const mercado =[
-        {
-            nome:"assai",
-            cidade:"ribeirao pires",
-            fruta:"abacaxi",
-        },
-        {
-            nome:"joanim",
-            cidade:"maua",
-            fruta:"abacaxi",
-        },
-        {
-            nome:"coop",
-            cidade:"santo andre",
-            fruta:"morango",
-        },
-    ]
-
-
-
-    const fitrando = lista.filter(itemlista => {
-        return itemlista.elegal === false
-    })
-
-    const exercicio2 = mercado.filter(itemmercado =>{
-        return itemmercado.fruta === 'abacaxi'
-    })
-
-    // listagem com 4 objetos cada objeto contendo 3 itens diversos, e item boolean
-    // só dois sejam true dois vão ser false e exiba os itens que tem esse "false"//
-
-    //outra lista que tenha 3 objetos com 3 strings e que
+    // console.log(JSON.parse('4'))
 
     return (
-        <>
-            <div className="app">
-                {
-                    fitrando.map(itemlista => {
-                        return (
-                            <>
-                                <p>{itemlista.nome}</p>
-                                <p>{itemlista.email}</p>
-                            </>
-                        )
-                    })
-                }
-            </div>
 
-   
-            <div className='app'>
-                {
-                    exercicio2.map(itemmercado =>{
-                        return (
-                            <>
-                            <p></p>
-                            <p>{itemmercado.nome}</p>
-                            <p>{itemmercado.cidade}</p>
-                            <p>{itemmercado.fruta}</p>
-                            </>
-
-                        )
-                    })
-                }
+        <div className="app">
+            <form>
+                <label>Nome:</label>
+                <input onChange={(e) => { alert(JSON.parse(e.target.value) + botao) }}/>
                 
+                
+                <div>
+                    <p onClick={() => { alert('voce conseguiu') }}>anderson tuche</p>
+                </div>
+            </form>
+        </div>
 
-            </div>
-        </>
     );
 }
 
