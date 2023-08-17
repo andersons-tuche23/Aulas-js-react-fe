@@ -1,34 +1,25 @@
 // import './app.css';
 import styles from '../styles/Home.module.css';
+import { Tuche1, Laranja1 } from '@/utils';
 
 function app() {
-    //onclick no click
-    //onchange é na mudança
 
-    // fazer um input com onchange que o a pessoa digitar ele vai somar com uma variavel
-    // com o valor 4 e vai retornar o alert com o resultado
 
-    //fazer um click numa div com texto qualquer que retorne um alert o texto "você conseguiu"
-    // de uma variavel
-    const botao = 4
+    const Tuche = 'uva'
+    const Laranja = 'abacaxi'
+    //criar uma função externa que chame o numero digitado no input no console log acrescentando
+    //a mensagem --é muito louco--
 
-    // console.log(JSON.parse('4'))
+    // passar duas variaveis para uma segunda função aonde elas retornem dentro de um alert depois do click
 
     return (
+        <form>
 
-        <div className="app">
-            <form>
-                <label>Nome:</label>
-                <input onChange={(e) => { alert(JSON.parse(e.target.value) + botao) }}/>
-                
-                
-                <div>
-                    <p onClick={() => { alert('voce conseguiu') }}>anderson tuche</p>
-                </div>
-            </form>
-        </div>
+            <input onChange={(e) => { Tuche1(e.target.value) }} />
 
-    );
+            <button onClick={(e) => { Laranja1('tuche') }}>Enviar</button>
+        </form>
+    )
 }
 
 export default app;
