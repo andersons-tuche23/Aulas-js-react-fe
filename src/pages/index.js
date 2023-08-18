@@ -1,25 +1,30 @@
 // import './app.css';
 import styles from '../styles/Home.module.css';
-import { Tuche1, Laranja1 } from '@/utils';
+import { Teste, Click} from '@/utils';
 
 function app() {
 
+    // quero que vôce faça uma condição que se o valor digitado no imput for --Guitarra--
+    // vôce vai responder o console 'tem cordas',  se digitar --Bateria-- console 'tem pedal'
+    // e vôce digitar --Microfone-- coloca 'tem fio',
+    //não exite esse instrumento
 
-    const Tuche = 'uva'
-    const Laranja = 'abacaxi'
+    //quero vôce faça um console com switch case que faça algo com 3 opções e uma opção para quando não
+    // atender as 3 opções
+
+
     
-
-    //criar uma função externa que chame o numero digitado no input no console log acrescentando
-    //a mensagem --é muito louco--
-
-    // passar duas variaveis para uma segunda função aonde elas retornem dentro de um alert depois do click
-
     return (
-        <form>
+    <form className={styles.form}>
 
-            <input onChange={(e) => { Tuche1(e.target.value, 'e muito legal')}} />
+            <input className={styles.input} onChange={(e) => {Teste(e.target.value)}} />
 
-            <button onClick={(e) => { Laranja1('tuche') }}>Enviar</button>
+            <input className={styles.input} onChange={(e) => {Click(e.target.value)}} />
+
+            {/* <button onClick={(e) => { Click('tuche') }}>Enviar</button> */}
+
+            
+
         </form>
     )
 }
