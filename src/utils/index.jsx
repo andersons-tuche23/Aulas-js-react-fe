@@ -1,5 +1,5 @@
-export const Tuche1 = (valordigitado) => {
-    console.log(valordigitado)
+export const Tuche1 = (valordigitado,nome) => {
+    console.log(valordigitado,nome)
 
 }
 

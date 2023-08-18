@@ -7,6 +7,8 @@ function app() {
 
     const Tuche = 'uva'
     const Laranja = 'abacaxi'
+    
+
     //criar uma função externa que chame o numero digitado no input no console log acrescentando
     //a mensagem --é muito louco--
 
@@ -15,7 +17,7 @@ function app() {
     return (
         <form>
 
-            <input onChange={(e) => { Tuche1(e.target.value) }} />
+            <input onChange={(e) => { Tuche1(e.target.value, 'e muito legal')}} />
 
             <button onClick={(e) => { Laranja1('tuche') }}>Enviar</button>
         </form>
