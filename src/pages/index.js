@@ -1,35 +1,38 @@
-// import './app.css';
+import React, { useState } from "react";
 import styles from '../styles/Home.module.css';
-import { Teste, Click} from '@/utils';
-
-function app() {
-
-    // quero que vôce faça uma condição que se o valor digitado no imput for --Guitarra--
-    // vôce vai responder o console 'tem cordas',  se digitar --Bateria-- console 'tem pedal'
-    // e vôce digitar --Microfone-- coloca 'tem fio',
-    //não exite esse instrumento
-
-    //quero vôce faça um console com switch case que faça algo com 3 opções e uma opção para quando não
-    // atender as 3 opções
 
 
+function home() {
+    // use state
+    //voce tera que fazer uma função que muda dois  states que exibe na tela numa mesma frase
+
+    //voce tera que fazer um state como contador, * 4
+
+
+    const [anime, setTeste] = useState('naruto shippuden é bom')
+    const [contador, setTeste2] = useState(0)
     
+
     return (
-    <form className={styles.form}>
+        <>
+            {anime}
 
-            <input className={styles.input} onChange={(e) => {Teste(e.target.value)}} />
-
-            <input className={styles.input} onChange={(e) => {Click(e.target.value)}} />
-
-            {/* <button onClick={(e) => { Click('tuche') }}>Enviar</button> */}
+            {contador}
 
             
+                <div className={styles.exercicio}>
+                    <button onClick={() => setTeste('mas prefiro dragon ball')}>trocar o nome</button>
+                </div>
 
-        </form>
+                <div>
+                    <button onClick={() => setTeste2(contador + 4)}>trocar o numero</button>
+                </div>
+            
+        </>
     )
 }
 
-export default app;
+export default home;
 
 
 
