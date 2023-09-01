@@ -1,7 +1,33 @@
+.cores{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+
+
 .texto{
     text-align: center;
     font-size: 50px;
     margin-top: 50px;
+}
+
+
+
+.back{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+
+.color{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.img{
+    margin-top: 100px;
 }
 
    
